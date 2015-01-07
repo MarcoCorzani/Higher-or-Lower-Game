@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Higher_or_Lower_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,84 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Higher or Lower Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjE-xk-mce">
+                                <rect key="frame" x="122" y="20" width="357" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess a number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65g-f1-Sw3">
+                                <rect key="frame" x="104" y="93" width="151" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jRd-Zx-4tN">
+                                <rect key="frame" x="275" y="94" width="50" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.95238600429999998" blue="0.62221749410000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="aAY-h6-V7k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPi-ce-JJS">
+                                <rect key="frame" x="123" y="197" width="342" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="FjG-dl-NsM"/>
+                                    <constraint firstAttribute="width" constant="342" id="Xxr-Cp-1s9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="su4-1z-iUQ">
+                                <rect key="frame" x="280" y="271" width="40" height="30"/>
+                                <color key="backgroundColor" red="0.2143487442" green="0.59607796719999995" blue="0.30675237989999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W2U-oB-ZH5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b71-Wg-LeI">
+                                <rect key="frame" x="365" y="90" width="59" height="38"/>
+                                <color key="backgroundColor" red="1" green="0.68521303410000001" blue="0.1809986375" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Guess">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="guessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S5V-uk-Jhw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jRd-Zx-4tN" firstAttribute="top" secondItem="GjE-xk-mce" secondAttribute="bottom" constant="31" id="47f-jI-GwH"/>
+                            <constraint firstItem="65g-f1-Sw3" firstAttribute="top" secondItem="GjE-xk-mce" secondAttribute="bottom" constant="30" id="Daz-4Q-edU"/>
+                            <constraint firstItem="su4-1z-iUQ" firstAttribute="top" secondItem="UPi-ce-JJS" secondAttribute="bottom" constant="47" id="JMb-Mo-jqg"/>
+                            <constraint firstItem="b71-Wg-LeI" firstAttribute="top" secondItem="GjE-xk-mce" secondAttribute="bottom" constant="27" id="Smu-KI-D5t"/>
+                            <constraint firstItem="jRd-Zx-4tN" firstAttribute="leading" secondItem="65g-f1-Sw3" secondAttribute="trailing" constant="20" id="VBO-NW-Gau"/>
+                            <constraint firstAttribute="centerX" secondItem="UPi-ce-JJS" secondAttribute="centerX" constant="6" id="aRo-Th-1fW"/>
+                            <constraint firstItem="UPi-ce-JJS" firstAttribute="top" secondItem="jRd-Zx-4tN" secondAttribute="bottom" constant="73" id="bcF-6r-fhy"/>
+                            <constraint firstAttribute="centerX" secondItem="jRd-Zx-4tN" secondAttribute="centerX" id="cgd-N6-nMJ"/>
+                            <constraint firstAttribute="centerX" secondItem="su4-1z-iUQ" secondAttribute="centerX" id="fWW-00-ezc"/>
+                            <constraint firstAttribute="centerX" secondItem="GjE-xk-mce" secondAttribute="centerX" constant="-0.5" id="tds-q5-HBj"/>
+                            <constraint firstItem="b71-Wg-LeI" firstAttribute="leading" secondItem="jRd-Zx-4tN" secondAttribute="trailing" constant="40" id="uaN-fD-rTE"/>
+                            <constraint firstItem="GjE-xk-mce" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zUX-Af-qQq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="jRd-Zx-4tN" id="4gl-BY-l6J"/>
+                        <outlet property="outputLabel" destination="UPi-ce-JJS" id="JbR-ix-NCm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="530" y="571"/>
         </scene>
     </scenes>
 </document>
